@@ -29,8 +29,6 @@ void setup() {
   for (int i = 0; i < 9; i++) {
     pinMode(health_pins[i], OUTPUT);
   }
-
-  Serial.begin(9600);
   
   timer = 60;
   
