@@ -49,6 +49,10 @@ int Paddle::get_width() {
   return this->width;
 }
 
+int Paddle::get_height(){
+  return this->height;
+}
+
 void Paddle::draw() {
   this->base_c = map(analogRead(this->pin), 0, 1023, 0, 9 - this->width);
 

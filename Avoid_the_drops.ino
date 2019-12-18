@@ -13,7 +13,7 @@ void draw_health(unsigned int remaining);
 
 // Globals
 Drops_list drops(mtx_col_pins, data_pin, latch_pin, clock_pin);
-Paddle paddle(0, 0, 1, 1, input_pin, mtx_col_pins, data_pin, latch_pin, clock_pin);
+Paddle paddle(0, 0, 2, 2, input_pin, mtx_col_pins, data_pin, latch_pin, clock_pin);
 int timer;
 
 void setup() {
@@ -29,6 +29,8 @@ void setup() {
   for (int i = 0; i < 9; i++) {
     pinMode(health_pins[i], OUTPUT);
   }
+
+  Serial.begin(9600);
   
   timer = 60;
   

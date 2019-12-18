@@ -1,6 +1,6 @@
 #include "Drop.h"
 
-Drop::Drop(int base, int width, int col, int* mtx_pins, int data_pin, int latch_pin, int clock_pin) {
+Drop::Drop(int base, int width, int col, int mtx_pins[8], int data_pin, int latch_pin, int clock_pin) {
   for(int i = 0; i < 8; i++){
     this->mtx_pins[i] = mtx_pins[i];	
   }
@@ -21,8 +21,8 @@ void Drop::set_next_drop(Drop* drop) {
   this->next_drop = drop;
 }
 
-int Drop::update_drop() {
-  if (this->base < 2) {
+int Drop::update_drop(int lowest_row) {
+  if (this->base < lowest_row) {
     return 0;
   }
 

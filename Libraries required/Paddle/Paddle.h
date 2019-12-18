@@ -15,6 +15,7 @@ class Paddle {
     int damage();
     int get_health();
     int get_width();
+    int get_height();
     void draw();
   private:
     int base_r;

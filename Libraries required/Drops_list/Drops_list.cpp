@@ -29,7 +29,7 @@ int Drops_list::update_drops(Paddle &paddle) {
   Drop* traverse = this->head;
 
   while (traverse != NULL) {
-    if (!traverse->update_drop()) {
+    if (!traverse->update_drop(1 + paddle.get_base_r() + paddle.get_height())) {
       if (paddle.get_base_c() <= traverse->get_col() && traverse->get_col() <= paddle.get_base_c() + paddle.get_width() - 1) {
         if (paddle.damage()) {
           return 1;
