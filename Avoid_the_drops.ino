@@ -1,4 +1,3 @@
-#include "Drop.h"
 #include "Paddle.h"
 #include "Drops_list.h"
 
